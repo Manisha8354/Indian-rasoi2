@@ -1,0 +1,31 @@
+/* .head{
+  position: relative;
+  left: 300px;
+  background-color: #fbbf24;
+} */
+
+
+/* *{
+  background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(67, 67, 67));
+} */
+
+
+/* .head{
+  position: relative;
+  left: 120px;
+  top: 100px;
+  color: white;
+  font-size: 50px;
+  
+}
+head1{
+position: relative;
+bottom: 500px;
+} */
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
