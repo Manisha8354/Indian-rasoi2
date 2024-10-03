@@ -9,7 +9,7 @@ const dishes = [
     description: "At Tasty Abbotsford, food is more than just a meal—it’s an experience. Whether you crave the creamy richness of our signature Butter Chicken or the smoky, velvety smoothness of Dal Makhni, each dish is crafted with passion and flavor. From the tangy zest of Fish Curry to the royal indulgence of Shahi Paneer, our menu promises a culinary journey through the vibrant spices of India",
   },
   {
-    title: "Discover the Delight of Rasmalai...",
+    title: "Discover the Delight of Rasmalai... ",
     img: "https://static.vecteezy.com/system/resources/previews/026/721/946/non_2x/illustration-of-indian-national-food-view-from-above-generative-ai-free-photo.jpg",
     description: "We believe that every bite tells a story, and our chefs take pride in using the freshest ingredients to ensure that your plate is bursting with authentic, unforgettable flavors. Let the aromas captivate your senses and indulge in the warmth of a meal that feels like home.",
   },
