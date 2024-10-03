@@ -72,7 +72,7 @@ export default function Footer() {
       </div>
 
       {/* Legal Text */}
-      <p className="mt-4 md:mt-0 text-sm text-gray-400">&copy; 2024 Indian Rasoi. All rights reserved.</p>
+      <p className="mt-4 md:mt-0 text-sm text-gray-400">&copy; 2024 Techxpert.in | All rights reserved.</p>
     </div>
   </div>
 </footer>

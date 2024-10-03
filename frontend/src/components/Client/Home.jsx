@@ -253,8 +253,8 @@ const Home = () => {
   </div>
 
   {/* View More Menu Button */}
-  <div className="flex justify-center h-12  mt-[-10px]">
-    <Link to='/viewmoremenu' className="bg-yellow-500 text-black font-bold py-2 px-2 rounded-lg transition duration-300 ease-in-out hover:bg-yellow-600 hover:scale-105">
+  <div className="flex justify-center items-center h-12  mt-[-10px]">
+    <Link to='/viewmoremenu' className="bg-yellow-500 text-black font-bold px-2 py-2  rounded-lg transition duration-300 ease-in-out hover:bg-yellow-600 hover:scale-105">
       View More Menu
     </Link>
   </div>
