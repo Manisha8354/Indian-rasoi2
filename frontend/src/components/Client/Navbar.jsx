@@ -39,7 +39,7 @@ export default function Navbar() {
         d="M3 5h2a2 2 0 012 2v3a2 2 0 01-2 2H3v2a9 9 0 009 9h2a9 9 0 009-9V5a2 2 0 00-2-2h-2a2 2 0 00-2 2v3a2 2 0 002 2h2v2a9 9 0 01-9 9h-2a9 9 0 01-9-9V7a2 2 0 012-2z"
       />
     </svg>
-    <span className="text-white font-semibold">+1 (778) 878-0033</span>
+    <span className="text-white font-semibold">+1 (604) 556-7560</span>
   </a>
 
   <p className="text-sm font-semibold text-center mx-auto my-2 md:my-0">
