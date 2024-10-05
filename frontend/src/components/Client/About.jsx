@@ -1,88 +1,81 @@
-import React from 'react'
-
+import React from 'react';
 import { motion } from 'framer-motion';
+import Testimonial from './Testimonial';
 
-const privacyPolicyContent = {
-  title: "About Us",
-  introduction: "Welcome to our about  page.Welcome to Indian Rasoi Curry House and Pizzeria, your go-to destination for a delightful fusion of Indian flavors in Abbotsford. As a take-out only restaurant, we take pride in offering a diverse menu featuring a wide variety of pizzas and authentic Indian dishes that you can enjoy in the comfort of your own home.",
-  sections: [
-    {
-      
-      content: "Indulge in our delicious pizzas, from classic pepperoni to exotic toppings like tandoori chicken and paneer tikka, all made with fresh ingredients and baked to perfection. Our commitment to quality ensures a crispy crust and gooey cheese with every bite.."
-    },
-    {
-      
-      content: "In addition to our pizza offerings, we serve up a mouth-watering selection of Indian dishes such as butter chicken, goat curry, and vegetable biryani, prepared with care and attention to detail using traditional spices and cooking techniques to bring out the flavors of India."
-    },
-    {
-      
-      content: "At Indian Rasoi, we understand the importance of catering to diverse dietary needs. That's why we offer Halal options for our Muslim patrons and gluten-free options for those with dietary restrictions. Everyone deserves to enjoy a delicious meal, and we are here to make that happen."
-    },
-    {
-    
-      content: "Planning an event? Let us take care of the catering for you. Our catering services are available for all types of events, from birthday parties to wedding functions, ensuring that your guests will be treated to a memorable dining experience filled with flavorful food.."
-    },
-    {
-      
-      content: "Visit us at Indian Rasoi Curry House and Pizzeria in Abbotsford to experience the best of Indian cuisine with our wide variety of offerings, including Halal and gluten-free options. We look forward to serving you and making your experience a truly special one. have the right to access, correct, or delete your personal information. Contact us if you wish to exercise these rights."
-    },
-    {
-      
-      content: "We may update our Privacy Policy from time to time. We will notify you of any significant changes through our website or other communication channels."
-    },
-   
-  ]
-};
-
-export default function About() {
+export default function AboutUs() {
   return (
-    <div>
-       
-    <div className="min-h-screen bg-gray-100 text-gray-900 ">
-      {/* Header */}
-      <header className="bg-yellow-900 text-white py-6">
-        <div className="container mx-auto text-center">
+    <>
+    <div className="min-h-screen lg:h-[80vh] transition-all duration-700 ease-in-out shadow-lg bg-gradient-to-r from-black via-yellow-800 to-red-950 mt-[120px]">
+      <div className="h-32 flex items-center justify-center">
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="text-3xl md:text-5xl font-bold text-white mb-4 hover:text-yellow-300 transition duration-300 ease-in-out"
+        >
+          Who We Are
+        </motion.h2>
+      </div>
+
+      {/* Container for the content */}
+      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
+        
+        {/* Image Section - two images on the left side */}
+        <div className="md:w-1/2 flex flex-col space-y-4 md:space-y-8 overflow-hidden">
+          <motion.img
+            src="https://img.grouponcdn.com/deal/3cNassrMgFWYb39wxt4QvbzDuFxU/3c-1452x871/v1/t600x362.webp"
+            alt="Indian Rasoi Dish 1"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
+            className="rounded-lg shadow-lg w-full h-auto max-h-48 object-cover mx-auto md:mx-0"
+          />
+          <motion.img
+            src="https://c0.wallpaperflare.com/preview/308/461/142/indian-food-indian-kitchen-meal-cooking.jpg"
+            alt="Indian Rasoi Dish 2"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="rounded-lg shadow-lg w-full h-auto max-h-48 object-cover mx-auto md:mx-0"
+          />
+        </div>
+
+        {/* Text Content */}
+        <div className="md:w-1/2 md:ml-8 mt-8 md:mt-0">
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 4 }}
-            className="text-3xl font-bold"
+            transition={{ duration: 1 }}
+            className="text-3xl md:text-4xl font-bold text-white mb-6"
           >
-            {privacyPolicyContent.title}
+            Welcome to Indian Rasoi Curry House and Pizzeria
           </motion.h1>
+
+          <div className="space-y-4"> {/* Add space between paragraphs */}
+            {[
+              "Indian Rasoi Curry House and Pizzeria was founded with a passion for bringing authentic Indian flavors and delicious pizza to the Abbotsford community",
+              "Our chefs are dedicated to preparing each dish with the finest ingredients and traditional spices, ensuring a genuine taste of India in every bite. Whether you're craving pizza or traditional Indian cuisine, we have something for everyone!",
+              "We also serve Indian favorites such as butter chicken and vegetable biryani, crafted with traditional spices for authentic flavors.",
+              "We cater to diverse dietary needs, offering Halal and gluten-free options so everyone can enjoy our meals.",
+              "Planning an event? We offer catering services for all occasions!",
+            ].map((text, index) => (
+              <motion.p
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.6 + index * 0.3 }} // Add staggered delay
+                className="text-yellow-200 leading-relaxed mb-4"
+              >
+                {text}
+              </motion.p>
+            ))}
+          </div>
         </div>
-      </header>
-
-      {/* Main Content */}
-      <main className="py-12">
-        <div className="container mx-auto px-4">
-          <motion.section
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 4 }}
-            className="bg-white shadow-md rounded-lg p-6 mb-8"
-          >
-            <p>{privacyPolicyContent.introduction}</p>
-          </motion.section>
-
-          {privacyPolicyContent.sections.map((section, index) => (
-            <motion.section
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 4, delay: index * 0.3 }}
-              className="bg-white shadow-md rounded-lg p-6 mb-8"
-            >
-              <h2 className="text-xl font-semibold mb-2">{section.heading}</h2>
-              <p>{section.content}</p>
-            </motion.section>
-          ))}
-        </div>
-      </main>
-
-      {/* Footer */}
-     
+      </div>
     </div>
-    </div>
-  )
+
+<Testimonial/>
+    
+    </>
+  );
 }

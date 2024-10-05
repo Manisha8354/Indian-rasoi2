@@ -66,37 +66,51 @@ export default function Navbar() {
     </div>
 
     {/* Middle - Links with dropdowns */}
-    <ul className="hidden lg:flex space-x-4 font-semibold text-lg">
-      <li><Link to="/" className="hover:text-yellow-800 transition-colors duration-300">Home</Link></li>
-      <Link to='/about' onClick={toggleContact} className="hover:text-yellow-600 transition-colors duration-300 focus:outline-none">
-          About Us
-        </Link>
-      <li className="relative group">
+    <div className="flex justify-center ml-[100px]">
+  <ul className="hidden lg:flex space-x-4 font-semibold text-lg">
+    <li><Link to="/" className="hover:text-yellow-800 transition-colors duration-300">Home</Link></li>
+    <Link to='/about' onClick={toggleContact} className="hover:text-yellow-600 transition-colors duration-300 focus:outline-none">
+      About Us
+    </Link>
+    <li className="relative group">
+      <Link to='/ourmenu'>
         <button onClick={toggleMenu} className="hover:text-yellow-600 transition-colors duration-300 focus:outline-none">
           Our Menu
         </button>
-      </li>
-      <li><Link to="/location" className="hover:text-yellow-800 transition-colors duration-300">Locations</Link></li>
-      <li className="relative group">
-        <Link to='/contact' onClick={toggleContact} className="hover:text-yellow-600 transition-colors duration-300 focus:outline-none">
-          Contact Us
-        </Link>
-      </li>
-      <li className="relative group">
-        <Link to='/blog' onClick={toggleContact} className="hover:text-yellow-600 transition-colors duration-300 focus:outline-none">
-          Our Blogs
-        </Link>
-      </li>
-    </ul>
+      </Link>
+    </li>
+    <li className="relative group">
+      <Link to='/contact' onClick={toggleContact} className="hover:text-yellow-600 transition-colors duration-300 focus:outline-none">
+        Contact Us
+      </Link>
+    </li>
+    <li className="relative group">
+      <Link to='/blog' onClick={toggleContact} className="hover:text-yellow-600 transition-colors duration-300 focus:outline-none">
+        Our Blogs
+      </Link>
+    </li>
+  </ul>
+</div>
+
+
 
     {/* Right Side - Buttons */}
-    <div className="hidden lg:flex space-x-4">
+    
+
+    <div className="hidden lg:flex space-x-4 ml-[280px]">
       <Link to='/order'>
       <button className="border border-yellow-600 bg-black text-white px-2 py-1 rounded-lg font-semibold transition-transform transform hover:bg-yellow-600 hover:scale-105 duration-300">
         Order Now
       </button>
       </Link>
     </div>
+    <div className="hidden lg:flex space-x-4 ">
+  <Link to='/catering'>
+    <button className="border border-yellow-600 bg-black text-white px-2 py-1 rounded-lg font-semibold transition-transform transform hover:bg-yellow-600 hover:scale-105 duration-300">
+      Catering services
+    </button>
+  </Link>
+</div>
 
     {/* Hamburger Menu for Mobile */}
     <div className="lg:hidden">
@@ -119,12 +133,20 @@ export default function Navbar() {
           </Link>
         </li>
         <li><Link to="/about" className="hover:text-white" onClick={() => setIsMenuOpen(false)}>About Us</Link></li>
-        <li><Link to="/" className="hover:text-white" onClick={() => setIsMenuOpen(false)}>Our Menu</Link></li>
+        <li><Link to="/ourmenu" className="hover:text-white" onClick={() => setIsMenuOpen(false)}>Our Menu</Link></li>
         <li><Link to="/location" className="hover:text-white" onClick={() => setIsMenuOpen(false)}>Location</Link></li>
         <li><Link to="/contact" className="hover:text-white" onClick={() => setIsMenuOpen(false)}>Contact Us</Link></li>
         <li><Link to="/blog" className="hover:text-white" onClick={() => setIsMenuOpen(false)}>Blogs</Link></li>
         <div className="space-y-4">
-          <button className="bg-black text-white w-full py-2 rounded-lg font-semibold hover:bg-gray-700 transition-colors duration-300">Order Now</button>
+
+          <Link to='/order'>
+          <button className="bg-black text-white w-full py-2 rounded-lg font-semibold hover:bg-gray-300 transition-colors duration-300" onClick={() => setIsMenuOpen(false)}>Order Now</button>
+          </Link>
+        </div>
+        <div className="space-y-4">
+          <Link to='/catering'>
+          <button className="bg-black text-white w-full py-2 rounded-lg font-semibold hover:bg-gray-700 transition-colors duration-300" onClick={() => setIsMenuOpen(false)}>Catering services</button>
+          </Link>
         </div>
       </ul>
     </div>

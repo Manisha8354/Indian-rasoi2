@@ -1,7 +1,9 @@
 import React from 'react';
+import Testimonials from './Testimonial';
 
 export default function Location() {
   return (
+    <>
     <div className='mt-[130px]'>
       <div className="relative w-full h-60 sm:h-72 md:h-96 lg:h-[500px] xl:h-[600px] bg-cover bg-center" style={{ backgroundImage: 'url(https://img.freepik.com/premium-photo/beautiful-restaurant-food-black-background-generative-ai_74760-6670.jpg)' }}>
         {/* Content to overlap */}
@@ -12,7 +14,7 @@ export default function Location() {
           </svg>
 
           <h1 className="text-2xl sm:text-3xl md:text-[4rem] mb-2 text-white font-bold font-serif">Location</h1>
-          <p className="text-sm sm:text-lg mt-2 md:text-xl mb-4">Join us in the journey of a lifetime with your perfect match.</p>
+          <p className="text-sm sm:text-lg mt-2 md:text-xl mb-4">Join us in the journey of a lifetime with your perfect taste.</p>
         </div>
       </div>
 
@@ -43,5 +45,8 @@ export default function Location() {
         </div>
       </div>
     </div>
+
+    <Testimonials/>
+    </>
   );
 }

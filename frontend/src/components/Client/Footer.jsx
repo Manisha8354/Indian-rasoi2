@@ -21,11 +21,20 @@ export default function Footer() {
       <div>
         <h2 className="text-lg font-semibold mb-4">For Foodies</h2>
         <ul>
-          <li className="mb-2 hover:text-yellow-500"><a href="#">Restaurants</a></li>
-          <li className="mb-2 hover:text-yellow-500"><a href="#">Offers</a></li>
-          {/* <li className="mb-2 hover:text-yellow-500"><a href="#">Discover</a></li> */}
-         
-        </ul>
+  <li className="mb-2 hover:text-yellow-500">
+    <a href="#">Restaurants</a>
+  </li>
+  
+  <li className="mb-2 hover:text-yellow-500">
+    <a href="#">Hours of Operation:</a>
+    <ul className="ml-4 mt-2">
+      <li><i className="fas fa-arrow-right mr-2"></i>Sunday to Thursday - 11 am to 11 pm</li>
+      <li><i className="fas fa-arrow-right mr-2"></i>Friday and Saturday- 11am to 12am</li>
+    </ul>
+  </li>
+</ul>
+
+
       </div>
 
       {/* Column 3 */}
@@ -34,7 +43,7 @@ export default function Footer() {
         <ul>
           <li className="mb-2 hover:text-yellow-500"><a href="/term">Terms & Conditions</a></li>
           <li className="mb-2 hover:text-yellow-500"><a href="/privacy">Privacy Policy</a></li>
-          {/* <li className="mb-2 hover:text-yellow-500"><a href="#">Cookie Policy</a></li> */}
+          {/* <li className="mb-2 hover:text-yellow-500"><a href="/faqs">FAQs</a></li> */}
           
         </ul>
       </div>
@@ -43,7 +52,9 @@ export default function Footer() {
       <div>
         <h2 className="text-lg font-semibold mb-4">Get in Touch</h2>
         <ul>
+        <li className="mb-2 hover:text-yellow-500"><a href="/order">Order Now</a></li>
           <li className="mb-2 hover:text-yellow-500"><a href="/contact">Help & Support</a></li>
+          <li className="mb-2 hover:text-yellow-500"><a href="/location">Location</a></li>
          
          
         </ul>

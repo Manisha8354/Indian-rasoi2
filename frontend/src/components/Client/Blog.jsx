@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { Link } from "react-router-dom";
+import Testimonials from "./Testimonial";
 
 const dishes = [
   {
@@ -36,6 +37,7 @@ const Blog = () => {
   }, []);
 
   return (
+    <>
     <div className="min-h-screen bg-black text-white">
     <div className="container mx-auto py-12 px-4">
       {/* Heading */}
@@ -76,6 +78,8 @@ const Blog = () => {
       </div>
     </div>
   </div>
+  <Testimonials/>
+  </>
   
 
   );

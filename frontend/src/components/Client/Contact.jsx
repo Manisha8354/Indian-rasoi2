@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from 'axios';
+import img from "../../assets/contact.webp"; // Import the background image
+import Testimonials from "./Testimonial";
 
 export default function Contact() {
 
@@ -47,7 +49,7 @@ export default function Contact() {
     e.preventDefault();
     const errors = validateForm();
     setFormErrors(errors);
-console.log(formData)
+    console.log(formData);
     // If no validation errors, submit the form
     if (Object.keys(errors).length === 0) {
       try {
@@ -75,7 +77,7 @@ console.log(formData)
   return (
     <>
       {/* Banner Section */}
-      <div className=" mt-[130px] relative w-full h-96 bg-cover bg-center" style={{ backgroundImage: 'url(https://www.shutterstock.com/image-photo/different-types-indian-food-thali-260nw-1826470667.jpg)' }}>
+      <div className="mt-[135px] relative w-full h-96 bg-cover bg-center" style={{ backgroundImage: `url(https://st2.depositphotos.com/1001092/8996/i/450/depositphotos_89963472-stock-photo-herbs-and-spices-selection.jpg)` }}>
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 flex items-center justify-center h-full">
           <div className="text-center">
@@ -103,8 +105,14 @@ console.log(formData)
 
               {/* Paragraph with phone number */}
               <p className="text-white text-sm sm:text-lg md:text-xl mt-4">
-                (604) 556-7560
+               +1 (604) 556-7560
               </p>
+              <p className="text-white text-sm sm:text-lg md:text-xl mt-4">
+  <a href="mailto:indianrasoi15@gmail.com" className="hover:underline">
+    indianrasoi15@gmail.com
+  </a>
+</p>
+
             </div>
           </div>
         </div>
@@ -122,7 +130,7 @@ console.log(formData)
         {/* Contact Form and Image Section */}
         <div className="flex flex-col md:flex-row items-center gap-10">
           {/* Image Section */}
-          <div className="md:w-3/4">
+          <div className="w-full md:w-3/4">
             <img
               className="w-full h-auto rounded-lg shadow-md"
               src="https://images.unsplash.com/photo-1513104890138-7c749659a591?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D"
@@ -131,7 +139,7 @@ console.log(formData)
           </div>
 
           {/* Contact Form Section */}
-          <div className="md:w-3/4 bg-black p-8 rounded-lg shadow-lg">
+          <div className="w-full md:w-3/4 bg-black p-8 rounded-lg shadow-lg">
             <form method="post" onSubmit={handleSubmit}>
               {/* Name Field */}
               <div className="mb-6">
@@ -200,6 +208,7 @@ console.log(formData)
           </div>
         </div>
       </div>
+      <Testimonials/>
     </>
   );
 }
